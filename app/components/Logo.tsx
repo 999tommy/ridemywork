@@ -19,11 +19,11 @@ interface LogoFullProps {
 export function RMWMark({ size = 40, className = "" }: LogoMarkProps) {
   return (
     <img
-      src="/logo-icon.jpg"
+      src="/logo.jpg"
       alt="RideMyWork logo"
       width={size}
       height={size}
-      className={`rounded-xl object-cover ${className}`}
+      className={`rounded-2xl object-cover ${className}`}
       style={{ width: size, height: size }}
     />
   );

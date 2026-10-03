@@ -62,16 +62,11 @@ export const metadata: Metadata = {
   /* Favicons & icons */
   icons: {
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/logo.jpg", type: "image/jpeg" },
     ],
-    shortcut: "/favicon.svg",
+    shortcut: "/logo.jpg",
     apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-    ],
-    other: [
-      { rel: "mask-icon", url: "/favicon.svg", color: "#07120f" },
+      { url: "/logo.jpg", sizes: "180x180", type: "image/jpeg" },
     ],
   },
 
@@ -117,7 +112,7 @@ export const metadata: Metadata = {
     capable: true,
     title: SITE_NAME,
     statusBarStyle: "black-translucent",
-    startupImage: ["/apple-touch-icon.png"],
+    startupImage: ["/logo.jpg"],
   },
 
   /* Format detection */
@@ -259,9 +254,9 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
 
-        {/* Favicon fallbacks */}
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="alternate icon" href="/favicon.ico" />
+        {/* Favicon */}
+        <link rel="icon" href="/logo.jpg" type="image/jpeg" />
+        <link rel="apple-touch-icon" href="/logo.jpg" />
 
         {/* Web App Manifest */}
         <link rel="manifest" href="/site.webmanifest" />
