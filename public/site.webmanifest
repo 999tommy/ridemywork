@@ -1,0 +1,39 @@
+{
+  "name": "RideMyWork",
+  "short_name": "RideMyWork",
+  "description": "Verified carpooling in Lagos. Join existing journeys and share the cost.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07120f",
+  "theme_color": "#07120f",
+  "lang": "en-NG",
+  "orientation": "portrait-primary",
+  "categories": ["transportation", "lifestyle"],
+  "icons": [
+    {
+      "src": "/logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Find a Trip",
+      "url": "/#passengers",
+      "description": "Search for available trips going your way"
+    },
+    {
+      "name": "Become a Trip Host",
+      "url": "/#trip-hosts",
+      "description": "Share your empty seats on a journey you are already making"
+    }
+  ]
+}
