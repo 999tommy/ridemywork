@@ -12,8 +12,8 @@ const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 /* ─── Viewport ────────────────────────────────────────────────────────── */
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f6f5ee" },
-    { media: "(prefers-color-scheme: dark)", color: "#07120f" },
+    { media: "(prefers-color-scheme: light)", color: "#f4efe6" },
+    { media: "(prefers-color-scheme: dark)", color: "#153e30" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -262,7 +262,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
 
         {/* Microsoft tile */}
-        <meta name="msapplication-TileColor" content="#07120f" />
+        <meta name="msapplication-TileColor" content="#153e30" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
 
         {/* Structured data */}

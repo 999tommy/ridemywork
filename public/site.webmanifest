@@ -2,10 +2,10 @@
   "name": "RideMyWork",
   "short_name": "RideMyWork",
   "description": "Verified carpooling in Lagos. Join existing journeys and share the cost.",
-  "start_url": "/",
+  "start_url": "/ride",
   "display": "standalone",
-  "background_color": "#07120f",
-  "theme_color": "#07120f",
+  "background_color": "#f4efe6",
+  "theme_color": "#f4efe6",
   "lang": "en-NG",
   "orientation": "portrait-primary",
   "categories": ["transportation", "lifestyle"],
@@ -27,12 +27,12 @@
   "shortcuts": [
     {
       "name": "Find a Trip",
-      "url": "/#passengers",
+      "url": "/ride/find",
       "description": "Search for available trips going your way"
     },
     {
       "name": "Become a Trip Host",
-      "url": "/#trip-hosts",
+      "url": "/ride/offer",
       "description": "Share your empty seats on a journey you are already making"
     }
   ]

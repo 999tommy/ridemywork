@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function Offline() { return <main className="auth-screen"><section className="auth-card"><span className="overline">YOU’RE OFFLINE</span><h1 className="offline-title">Your next trip can wait.</h1><p className="offline-copy">Reconnect to refresh trip availability and messages. Your account and requests are never stored on this device.</p><Link className="button primary-action full-action" href="/ride">Try again</Link></section></main>; }

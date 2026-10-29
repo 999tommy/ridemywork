@@ -18,7 +18,7 @@ interface LogoFullProps {
 /* ─── Standalone icon ───────────────────────────────────────────────── */
 export function RMWMark({ size = 40, className = "" }: LogoMarkProps) {
   return (
-    <img
+    <Image
       src="/logo.jpg"
       alt="RideMyWork logo"
       width={size}
@@ -63,3 +63,5 @@ export function RMWLogoFooter({ className = "" }: { className?: string }) {
     </a>
   );
 }
+import Image from "next/image";
+

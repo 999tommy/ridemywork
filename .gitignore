@@ -1,1 +1,8 @@
 node_modules
+.next
+.next-verify
+.next-check-*
+.env*
+!.env.example
+
+supabase/.env.functions
