@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"app\\\\components\\\\RideApp.tsx -> ./RouteMap\":{\"id\":\"app\\\\components\\\\RideApp.tsx -> ./RouteMap\",\"files\":[\"static/css/_app-pages-browser_app_components_RouteMap_tsx.css\",\"static/chunks/_app-pages-browser_app_components_RouteMap_tsx.js\"]}}"

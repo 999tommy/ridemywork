@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Logo from "../components/Logo";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, ArrowRight, CarFront, Eye, EyeOff, ShieldCheck } from "lucide-react";
 import { createClient } from "../../lib/supabase/client";
@@ -152,7 +153,7 @@ export default function AuthPage() {
 
   const creating = mode === "create";
   const signingIn = mode === "signin";
-  return <main className="auth-screen"><Link href="/about" className="auth-back"><ArrowLeft size={17}/> About RideMyWork</Link><div className="auth-brand"><span className="rmw-brand-mark">R</span><span>RideMyWork<small>Move together</small></span></div><section className="auth-card">
+  return <main className="auth-screen"><Link href="/about" className="auth-back"><ArrowLeft size={17}/> About RideMyWork</Link><Logo href="/about" className="auth-brand" width={218} tagline="Move together" priority/><section className="auth-card">
     <div className="auth-intro"><span className="auth-icon"><CarFront size={24}/></span><span className="overline">YOUR NEXT COMMUTE, CONNECTED</span><h1>{creating ? "A better way to get there." : mode === "recover" ? "Recover your account." : mode === "update" ? "Choose a new password." : "Welcome back."}</h1><p>{creating ? "Join as a passenger, a Trip Host, or both. Your account supports either side of the journey." : signingIn ? "Use your username or email to sign in." : mode === "recover" ? "We’ll send a secure reset link to the email on your account." : "Set a new password for your RideMyWork account."}</p></div>
     <form noValidate onSubmit={submit}>
       {creating && <>

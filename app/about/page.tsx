@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./about.css";
 import { ArrowDownRight, ArrowRight, BadgeCheck, Building2, CalendarDays, CarFront, Check, MapPin, Route, ShieldCheck, Users, Wallet, Waypoints } from "lucide-react";
 import SearchCard from "./SearchCard";
+import Logo from "../components/Logo";
 
 export const metadata: Metadata = {
   title: "Carpooling in Lagos | Share an Existing Journey",
@@ -25,8 +26,8 @@ const faqs = [
   ["What is the boarding code for?", "After a seat is approved, a unique code helps the Trip Host confirm the right Passenger at pickup. It adds a check alongside seeing each other's profile."],
 ];
 
-function Brand() {
-  return <Link href="/about" className="about-brand" aria-label="RideMyWork home"><span className="about-brand-mark">R</span><span>RideMyWork<small>Move together</small></span></Link>;
+function Brand({ footer = false }: { footer?: boolean }) {
+  return <Logo href="/about" className="about-brand" width={footer ? 150 : 190} tagline="Move together" responsive={!footer} priority={!footer} />;
 }
 
 function Action({ href, children, secondary = false }: { href: string; children: React.ReactNode; secondary?: boolean }) {
@@ -60,6 +61,6 @@ export default function AboutPage() {
     <section className="about-faq" id="faq"><div><p className="about-eyebrow">GOOD TO KNOW</p><h2>Clear answers<br/><em>for a shared journey.</em></h2><p>New ways of getting around should feel easy to understand.</p><Action href="mailto:support@ridemywork.com" secondary>Talk to our team</Action></div><div className="faq-list">{faqs.map(([q,a])=><details key={q}><summary>{q}<span>+</span></summary><p>{a}</p></details>)}</div></section>
 
     <section className="about-last-cta"><p className="about-eyebrow">YOUR NEXT JOURNEY IS OUT THERE</p><h2>They have the journey.<br/><em>You have the destination.</em></h2><p>Find the person already going your way—or share the seats on a trip you planned.</p><div><Action href="/auth?role=passenger">Find a trip</Action><Action href="/auth?role=trip_host" secondary>Become a Trip Host</Action></div></section>
-    <footer className="about-footer"><Brand/><div><a href="#how">How it works</a><a href="#safety">Safety</a><a href="#faq">FAQ</a><a href="mailto:support@ridemywork.com">Contact</a><Link href="/ride">Open RideMyWork</Link></div><small>© {new Date().getFullYear()} RideMyWork · Lagos, Nigeria</small></footer>
+    <footer className="about-footer"><Brand footer/><div><a href="#how">How it works</a><a href="#safety">Safety</a><a href="#faq">FAQ</a><a href="mailto:support@ridemywork.com">Contact</a><Link href="/ride">Open RideMyWork</Link></div><small>© {new Date().getFullYear()} RideMyWork · Lagos, Nigeria</small></footer>
   </main>;
 }

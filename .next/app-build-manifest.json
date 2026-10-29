@@ -1,5 +1,11 @@
 {
   "pages": {
+    "/about/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/about/page.css",
+      "static/chunks/app/about/page.js"
+    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -11,21 +17,25 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/ride/activity/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/ride/activity/page.js"
-    ],
     "/ride/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/ride/page.js"
     ],
-    "/about/page": [
+    "/offline/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/about/page.css",
-      "static/chunks/app/about/page.js"
+      "static/chunks/app/offline/page.js"
+    ],
+    "/ride/trips/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/ride/trips/[id]/page.js"
+    ],
+    "/ride/activity/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/ride/activity/page.js"
     ],
     "/_not-found/page": [
       "static/chunks/webpack.js",

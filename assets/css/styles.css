@@ -74,17 +74,6 @@ a {
   letter-spacing: 0;
 }
 
-.brand-mark {
-  display: grid;
-  width: 34px;
-  height: 34px;
-  place-items: center;
-  color: var(--ink);
-  border-radius: 50%;
-  background: var(--mint);
-  font-weight: 900;
-}
-
 .site-nav {
   display: flex;
   align-items: center;
@@ -704,3 +693,5 @@ h3 {
     flex-direction: column;
   }
 }
+.brand-logo { display: block; width: 174px; height: auto; }
+@media (max-width: 640px) { .brand-logo { width: 148px; } }

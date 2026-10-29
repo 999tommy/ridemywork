@@ -19,7 +19,7 @@ self.addEventListener("fetch", (event) => {
 });
 self.addEventListener("push", (event) => {
   const data = event.data?.json() ?? { title: "RideMyWork", body: "You have a new update." };
-  event.waitUntil(self.registration.showNotification(data.title || "RideMyWork", { body: data.body || "You have a new update.", icon: "/logo-icon.jpg", badge: "/logo-icon.jpg", data: { href: data.href || "/ride/activity" } }));
+  event.waitUntil(self.registration.showNotification(data.title || "RideMyWork", { body: data.body || "You have a new update.", icon: "/brand/pwa-icon-192.png", badge: "/brand/logo-icon-light.png", data: { href: data.href || "/ride/activity" } }));
 });
 self.addEventListener("notificationclick", (event) => {
   event.notification.close();

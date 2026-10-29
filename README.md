@@ -70,7 +70,7 @@ The setup steps below document project bootstrap and recovery. The connected pro
 
 RideMyWork is a progressive web app. On supported Android browsers, the app may show an **Install app** reminder on `/ride` no more than once every three days. Tapping **Install** opens the browser's own install prompt; the site cannot install itself without the user accepting. On iPhone and iPad, open the site in Safari, tap **Share**, then **Add to Home Screen**. The reminder includes these steps because iOS does not expose the same install prompt event. The app hides the reminder after installation. Install prompts require the deployed site to use HTTPS; `localhost` is suitable for local development.
 
-The manifest and service worker are already included. To change the app icon, replace `public/pwa-icon-192.png`, `public/pwa-icon-512.png`, `public/apple-touch-icon.png`, and `public/pwa-icon.svg` together, keeping the declared sizes and paths in `public/site.webmanifest` and `app/layout.tsx`.
+The manifest and service worker are already included. Official assets extracted from `public/RideMyWork.pdf` are in `public/brand/`. The horizontal lockups retain the PDF's vector wordmark paths and embed its raster mark; standalone icons are raster. The green app icon supplies the 16, 32, 48, 180, 192 and 512 px exports; a separate maskable icon keeps the mark within the platform safe area. Enlarged icon exports can look softer than vector artwork.
 
 - `NEXT_PUBLIC_SUPABASE_URL`: project URL.
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY`: anon/publishable key only.

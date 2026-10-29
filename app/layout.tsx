@@ -8,7 +8,7 @@ const SITE_NAME = "RideMyWork";
 const TAGLINE = "Verified Carpooling in Lagos";
 const DESCRIPTION =
   "RideMyWork connects verified people travelling in the same direction across Lagos. Join an existing journey, share the cost, and ride with someone you can trust.";
-const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
+const OG_IMAGE = `${SITE_URL}/brand/og-image.png`;
 
 /* ─── Viewport ────────────────────────────────────────────────────────── */
 export const viewport: Viewport = {
@@ -63,11 +63,14 @@ export const metadata: Metadata = {
   /* Favicons & icons */
   icons: {
     icon: [
-      { url: "/logo.jpg", type: "image/jpeg" },
+      { url: "/brand/favicon.ico", sizes: "48x48" },
+      { url: "/brand/favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/brand/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/brand/favicon-48.png", sizes: "48x48", type: "image/png" },
     ],
-    shortcut: "/logo.jpg",
+    shortcut: "/brand/favicon.ico",
     apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/brand/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
   },
 
@@ -88,7 +91,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "RideMyWork — Verified Carpooling in Lagos",
-        type: "image/jpeg",
+        type: "image/png",
       },
     ],
   },
@@ -113,7 +116,7 @@ export const metadata: Metadata = {
     capable: true,
     title: SITE_NAME,
     statusBarStyle: "black-translucent",
-    startupImage: ["/logo.jpg"],
+    startupImage: ["/brand/apple-touch-icon.png"],
   },
 
   /* Format detection */
@@ -162,9 +165,9 @@ const jsonLd = {
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/logo.jpg`,
-        width: 512,
-        height: 512,
+        url: `${SITE_URL}/brand/logo-full-color.png`,
+        width: 2567,
+        height: 478,
       },
       description: DESCRIPTION,
       foundingLocation: {
@@ -256,8 +259,8 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
 
         {/* Favicon */}
-        <link rel="icon" href="/logo.jpg" type="image/jpeg" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/brand/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png" />
 
         {/* Web App Manifest */}
         <link rel="manifest" href="/site.webmanifest" />
