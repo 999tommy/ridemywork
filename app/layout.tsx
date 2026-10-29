@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import InstallAppPrompt from "./components/InstallAppPrompt";
 import "./globals.css";
 
 /* ─── Site-wide constants ─────────────────────────────────────────────── */
@@ -66,7 +67,7 @@ export const metadata: Metadata = {
     ],
     shortcut: "/logo.jpg",
     apple: [
-      { url: "/logo.jpg", sizes: "180x180", type: "image/jpeg" },
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
   },
 
@@ -256,7 +257,7 @@ export default function RootLayout({
 
         {/* Favicon */}
         <link rel="icon" href="/logo.jpg" type="image/jpeg" />
-        <link rel="apple-touch-icon" href="/logo.jpg" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
         {/* Web App Manifest */}
         <link rel="manifest" href="/site.webmanifest" />
@@ -271,7 +272,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>{children}</body>
+      <body>{children}<InstallAppPrompt/></body>
     </html>
   );
 }

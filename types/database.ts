@@ -10,6 +10,7 @@ type RowTable<Row, Insert = Partial<Row>> = {
 type Profile = { id: string; username: string; display_name: string; account_type: "passenger" | "trip_host"; avatar_path: string | null; bio: string | null; home_area: string | null; verified: boolean; rating_average: number; trips_completed: number; co2_saved_kg: number; created_at: string; updated_at: string };
 type Vehicle = { id: string; owner_id: string; make: string; model: string; color: string; plate_last_four: string | null; seats: number; verified: boolean; created_at: string };
 type Trip = { id: string; host_id: string; vehicle_id: string | null; origin: string; destination: string; pickup_point: string | null; dropoff_point: string | null; origin_lat: number | null; origin_lng: number | null; destination_lat: number | null; destination_lng: number | null; departure_at: string; available_seats: number; contribution_per_seat: number; trip_reason: string; existing_journey_confirmed: boolean; recurrence_id: string | null; status: string; notes: string | null; created_at: string; updated_at: string };
+type TripPrivateLocation = { trip_id: string; host_id: string; origin_label: string; origin_lat: number; origin_lng: number; destination_label: string; destination_lat: number; destination_lng: number; pickup_label: string | null; pickup_lat: number | null; pickup_lng: number | null; dropoff_label: string | null; dropoff_lat: number | null; dropoff_lng: number | null; created_at: string };
 type RecurringCommute = { id: string; owner_id: string; origin: string; destination: string; weekdays: number[]; preferred_time: string; seats: number; role: string; active: boolean; created_at: string; updated_at: string };
 type SeatRequest = { id: string; trip_id: string; passenger_id: string; seats_requested: number; status: string; boarding_code: string | null; created_at: string; updated_at: string };
 type Community = { id: string; name: string; kind: string; description: string | null; verified: boolean; is_demo: boolean; created_at: string };
@@ -28,6 +29,7 @@ export type Database = {
       profiles: RowTable<Profile, Pick<Profile, "id" | "username" | "display_name"> & Partial<Profile>>;
       vehicles: RowTable<Vehicle, Pick<Vehicle, "owner_id" | "make" | "model" | "color" | "seats"> & Partial<Vehicle>>;
       trips: RowTable<Trip, Pick<Trip, "host_id" | "origin" | "destination" | "departure_at" | "available_seats" | "contribution_per_seat" | "trip_reason" | "existing_journey_confirmed"> & Partial<Trip>>;
+      trip_private_locations: RowTable<TripPrivateLocation, Pick<TripPrivateLocation, "trip_id" | "host_id" | "origin_label" | "origin_lat" | "origin_lng" | "destination_label" | "destination_lat" | "destination_lng"> & Partial<TripPrivateLocation>>;
       recurring_commutes: RowTable<RecurringCommute, Pick<RecurringCommute, "owner_id" | "origin" | "destination" | "weekdays" | "preferred_time" | "role"> & Partial<RecurringCommute>>;
       seat_requests: RowTable<SeatRequest, Pick<SeatRequest, "trip_id" | "passenger_id"> & Partial<SeatRequest>>;
       communities: RowTable<Community, Pick<Community, "name" | "kind"> & Partial<Community>>;

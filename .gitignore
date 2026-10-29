@@ -2,6 +2,7 @@ node_modules
 .next
 .next-verify
 .next-check-*
+.next-review-*
 .env*
 !.env.example
 
